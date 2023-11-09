@@ -37,6 +37,7 @@ describe('CounterGroupComponent', () => {
     ]
     component.onAdd()
 
+    expect(component.counters[3].num).toEqual(0)
     expect(component.counters.length).toEqual(4);
   });
 
@@ -48,6 +49,7 @@ describe('CounterGroupComponent', () => {
     ]
     component.onRemove(1)
 
+    expect(component.counters[1].num).toEqual(3);
     expect(component.counters.length).toEqual(2);
   });
 
