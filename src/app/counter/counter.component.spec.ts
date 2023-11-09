@@ -30,4 +30,10 @@ describe('CounterComponent', () => {
     component.onDecrease()
     expect(component.number).toEqual(1)
   })
+
+  it('should decrease number when call onDecrease', () => {
+    component.number = 2
+    component.onDecrease()
+    expect(component.number).toEqual(1)
+  })
 });

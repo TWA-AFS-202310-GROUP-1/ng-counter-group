@@ -23,4 +23,8 @@ export class CounterGroupComponent {
       element.num = 0
     });
   }
+  delete(index:number)
+  {
+    this.counters.splice(index,1)
+  }
 }
