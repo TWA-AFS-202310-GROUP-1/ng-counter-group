@@ -19,4 +19,10 @@ describe('CounterGroupComponentComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should add a counter', () => {
+    const initialLength = component.counters.length;
+    component.onAdd();
+    expect(component.counters.length).toEqual(initialLength + 1);
+  });
 });
