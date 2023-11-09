@@ -24,4 +24,8 @@ export class CounterGroupComponent {
   onDelete(index: number) {
     this.counters.splice(index,1)
   }
+
+  onResetAll() {
+    this.counters.forEach(i=>i.num=0)
+  }
 }
