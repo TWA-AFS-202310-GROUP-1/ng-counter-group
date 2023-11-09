@@ -3,10 +3,10 @@
     <span>Number of counters: {{counters.length}}</span>
 </div>
 
-<app-counter 
-    *ngFor = "let counter of counters" 
-    [number] = "counter.num" 
-    (change) = "counter.num = $event">
+<app-counter *ngFor="let counter of counters" [number]="counter.num" (change)="counter.num = $event">
 </app-counter>
 
 <div>Sum: {{sum}}</div>
+<div>
+    <button (click)="resetAll()">reset all</button>
+</div>
