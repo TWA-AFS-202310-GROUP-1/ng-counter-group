@@ -6,9 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./counter-group.component.css']
 })
 export class CounterGroupComponent {
-  counters: {num: number}[] = [
-    {num: 1},
-    {num: 2},
-    {num: 3},
-  ]
+  counters: {num: number}[] = []
 }
