@@ -36,5 +36,11 @@ describe('CounterComponentComponent', () => {
     expect(component.number).toEqual(0);
   });
 
+  it('should emit an event to remove the counter', () => {
+    spyOn(component.remove, 'emit'); 
+    component.onRemove();
+    expect(component.remove.emit).toHaveBeenCalled();
+  });
+
 
 });
