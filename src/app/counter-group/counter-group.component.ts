@@ -20,5 +20,8 @@ export class CounterGroupComponent {
   onAdd() {
     this.counters.push({num:0})
   }
-  
+
+  onDelete(index: number) {
+    this.counters.splice(index,1)
+  }
 }
