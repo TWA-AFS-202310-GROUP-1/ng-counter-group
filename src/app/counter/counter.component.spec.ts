@@ -20,13 +20,13 @@ describe('CounterComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  it('should increase number when call onIncrease',()=>{
+  it('should increase number when call onIncrease', () => {
     component.number = 2
     component.onIncrease()
     expect(component.number).toEqual(3)
   })
 
-  it('should increase number when click increase button', ()=>{
+  it('should increase number when click increase button', () => {
     component.number = 2
 
     fixture.debugElement.query(By.css('button')).triggerEventHandler('click')
@@ -36,7 +36,7 @@ describe('CounterComponent', () => {
     expect(text).toEqual('number: 3')
   })
 
-  it('should decrease number when click decrease button', ()=>{
+  it('should decrease number when click decrease button', () => {
     component.number = 2
 
     fixture.debugElement.queryAll(By.css('button'))[1].triggerEventHandler('click')

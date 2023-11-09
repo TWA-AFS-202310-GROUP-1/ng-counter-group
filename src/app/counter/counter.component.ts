@@ -8,11 +8,11 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 export class CounterComponent {
   @Input() number = 0
   @Output() change = new EventEmitter()
-  onIncrease(){
+  onIncrease() {
     this.number++
     this.change.emit(this.number)
   }
-  onDecrease(){
+  onDecrease() {
     this.number--
     this.change.emit(this.number)
   }
