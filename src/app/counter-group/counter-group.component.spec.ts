@@ -21,13 +21,34 @@ describe('CounterGroupComponent', () => {
   });
 
   it('should sum to be the sum of counters', () => {
+    component.counters = [
+      { num: 1 },
+      { num: 2 },
+      { num: 3 }
+    ]
     expect(component.sum).toEqual(6);
   });
 
   it('should add one to the counters when call onAdd', () => {
+    component.counters = [
+      { num: 1 },
+      { num: 2 },
+      { num: 3 }
+    ]
     component.onAdd()
 
     expect(component.counters.length).toEqual(4);
+  });
+
+  it('should remove one counter based on index when call onRemove', () => {
+    component.counters = [
+      { num: 1 },
+      { num: 2 },
+      { num: 3 }
+    ]
+    component.onRemove(1)
+
+    expect(component.counters.length).toEqual(2);
   });
 
 });
