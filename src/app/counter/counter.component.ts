@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { CounterGroupComponent } from '../counter-group/counter-group.component';
 
 @Component({
   selector: 'app-counter',
@@ -8,13 +9,23 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 export class CounterComponent {
   @Input() number = 0
   @Output() change = new EventEmitter()
-  onIncrease(){
+  @Input() id?: number
+  @Output() remove = new EventEmitter<number>()
+
+  constructor(private groupComponent: CounterGroupComponent) {}
+
+
+  onIncrease() {
     this.number++
     this.change.emit(this.number)
   }
-  onDecrease(){
+  onDecrease() {
     this.number--
     this.change.emit(this.number)
   }
+  OnRemove(){
+    this.remove.emit(this.id)
+  }
+
 }
 

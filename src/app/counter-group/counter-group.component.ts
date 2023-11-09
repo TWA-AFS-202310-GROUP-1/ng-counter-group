@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { CounterComponent } from '../counter/counter.component';
 
 @Component({
   selector: 'app-counter-group',
@@ -21,5 +22,7 @@ export class CounterGroupComponent {
     this.counters.push({num: 0})
   }
 
-
+  removeCounter(id: number) {
+    this.counters = this.counters.filter((_, i) => i !== id);
+  }
 }
