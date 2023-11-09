@@ -1,0 +1,16 @@
+<div>
+    <button (click)="onCreate()">create counter</button>
+    <span>Number of counters: {{counters.length}}</span>
+</div>
+
+<app-counter  
+    *ngFor="let counter of counters; index as i;" 
+    [number]="counter.num" 
+    (callRemove)="delete(i)"
+    (change)="counter.num = $event">
+</app-counter>
+
+<div>Sum: {{sum}}</div>
+<div>
+    <button (click)="resetAll()">reset all</button>
+</div>
