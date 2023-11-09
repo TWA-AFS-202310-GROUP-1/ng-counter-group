@@ -37,4 +37,8 @@ describe('CounterGroupComponentComponent', () => {
     expect(component.sum).toEqual(0);
   });
 
+  it('should calculate the sum correctly', () => {
+    expect(component.sum).toBe(6);
+  });
+
 });
