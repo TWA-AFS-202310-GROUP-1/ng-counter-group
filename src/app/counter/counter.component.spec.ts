@@ -46,4 +46,10 @@ describe('CounterComponent', () => {
     expect(text).toEqual('number: 1')
   })
 
+  it('should reset number to 0 when call onReset', () => {
+    component.number = 2
+    component.onReset()
+    expect(component.number).toEqual(0)
+  })
+
 });
