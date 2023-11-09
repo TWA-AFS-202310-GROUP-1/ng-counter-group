@@ -1,1 +1,7 @@
-<app-counter-component *ngFor="let counter of counters"> </app-counter-component>
+<app-counter-component 
+*ngFor="let counter of counters;"
+ [number]="counter.num" 
+ (change)="counter.num = $event"> </app-counter-component>
+<div>
+    Sum: {{sum}}
+</div>
