@@ -32,4 +32,9 @@ describe('CounterGroupComponentComponent', () => {
     expect(component.counters.length).toEqual(initialLength - 1);
   });
 
+  it('should reset all counters', () => {
+    component.onResetAll();
+    expect(component.sum).toEqual(0);
+  });
+
 });
