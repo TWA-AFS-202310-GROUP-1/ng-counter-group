@@ -18,4 +18,11 @@ describe('CountergroupComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should create a counter when call onAdd method', ()=>{
+    var numBefore = component.counters.length
+    component.onAdd()
+    expect(component.counters.length).toEqual(numBefore+1)
+
+  })
 });
