@@ -8,6 +8,8 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 export class CounterComponentComponent {
   @Input() number = 0
   @Output() change = new EventEmitter()
+  @Output() remove = new EventEmitter(); 
+
   onIncrease() {
     this.number++;
     this.change.emit(this.number)
@@ -16,9 +18,8 @@ export class CounterComponentComponent {
     this.number--;
     this.change.emit(this.number)
   }
-
-}
-function output(): (target: CounterComponentComponent, propertyKey: "change") => void {
-  throw new Error('Function not implemented.');
+  onRemove() {
+    this.remove.emit(); 
+  }
 }
 
