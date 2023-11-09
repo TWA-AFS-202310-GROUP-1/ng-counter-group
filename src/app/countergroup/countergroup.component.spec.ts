@@ -25,4 +25,12 @@ describe('CountergroupComponent', () => {
     expect(component.counters.length).toEqual(numBefore+1)
 
   })
+
+  it('should remove a counter when call removeCounter method', ()=>{
+    component.counters[0].num = 1
+    component.counters[1].num = 2
+    component.removeCounter(0)
+    expect(component.counters.length).toEqual(1)
+    expect(component.counters[0].num).toEqual(2)
+  })
 });
