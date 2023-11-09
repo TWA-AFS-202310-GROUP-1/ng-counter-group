@@ -1,6 +1,9 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { CounterGroupComponent } from '../counter-group/counter-group.component';
 
 import { CounterComponent } from './counter.component';
+import { By } from '@angular/platform-browser';
+
 
 describe('CounterComponent', () => {
   let component: CounterComponent;
@@ -30,4 +33,12 @@ describe('CounterComponent', () => {
     component.onDecrease()
     expect(component.number).toEqual(1);
   });
+
+  it('should reset number to 0 when call onReset', () => {
+    component.number = 2;
+    component.OnReset();
+    expect(component.number).toBe(0);
+  });
+
+
 });
