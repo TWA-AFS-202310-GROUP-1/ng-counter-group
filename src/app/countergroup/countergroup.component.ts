@@ -25,4 +25,8 @@ export class CountergroupComponent {
   removeCounter(_t5: number) {
     this.counters.splice(_t5, 1)
   }
+
+  reset(){
+    this.counters.forEach(x=>x.num=0)
+  }
 }

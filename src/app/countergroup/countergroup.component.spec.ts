@@ -23,6 +23,7 @@ describe('CountergroupComponent', () => {
     var numBefore = component.counters.length
     component.onAdd()
     expect(component.counters.length).toEqual(numBefore+1)
+    expect(component.counters[numBefore].num).toEqual(0)
 
   })
 
@@ -32,5 +33,13 @@ describe('CountergroupComponent', () => {
     component.removeCounter(0)
     expect(component.counters.length).toEqual(1)
     expect(component.counters[0].num).toEqual(2)
+  })
+
+  it('should change to 0 when call reset', ()=>{
+    component.reset()
+    var len = component.counters.length
+    for(var i = 0; i < len; i++){
+      expect(component.counters[i].num).toEqual(0)
+    }
   })
 });
