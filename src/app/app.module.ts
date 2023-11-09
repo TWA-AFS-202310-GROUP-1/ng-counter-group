@@ -3,10 +3,14 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { CounterComponentComponent } from './counter-component/counter-component.component';
+import { CounterGroupComponentComponent } from './counter-group-component/counter-group-component.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    CounterComponentComponent,
+    CounterGroupComponentComponent
   ],
   imports: [
     BrowserModule,
