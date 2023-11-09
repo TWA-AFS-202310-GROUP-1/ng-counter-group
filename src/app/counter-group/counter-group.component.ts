@@ -25,4 +25,10 @@ export class CounterGroupComponent {
   removeCounter(id: number) {
     this.counters = this.counters.filter((_, i) => i !== id);
   }
+
+  Reset(){
+    this.counters.forEach(Element => {
+      Element.num = 0
+    });
+  }
 }
