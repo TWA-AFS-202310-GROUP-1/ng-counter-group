@@ -26,6 +26,12 @@ export class CounterComponent {
   OnRemove(){
     this.remove.emit(this.id)
   }
+  OnReset(){
+    this.number = 0
+    this.change.emit(this.number)
+
+    
+  }
 
 }
 
