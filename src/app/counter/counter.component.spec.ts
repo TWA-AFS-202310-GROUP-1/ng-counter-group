@@ -35,4 +35,11 @@ describe('CounterComponent', () => {
     expect(component.number).toEqual(10);
     
   });
+
+  it('should reset number to zero when call onReset', () => {
+    component.onReset();
+
+    expect(component.number).toEqual(0);
+    
+  });
 });
