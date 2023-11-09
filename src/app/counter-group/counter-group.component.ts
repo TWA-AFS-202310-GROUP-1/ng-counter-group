@@ -23,4 +23,8 @@ export class CounterGroupComponent {
   onRemove(index: number){
     this.counters.splice(index, 1)
   }
+
+  onRestAll(){
+    this.counters.map(x => x.num = 0);
+  }
 }

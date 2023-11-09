@@ -51,4 +51,15 @@ describe('CounterGroupComponent', () => {
     expect(component.counters.length).toEqual(2);
   });
 
+  it('should remove all counters when call onResetAll', () => {
+    component.counters = [
+      { num: 1 },
+      { num: 2 },
+      { num: 3 }
+    ]
+    component.onRestAll()
+
+    expect(component.sum).toEqual(0);
+  });
+
 });
