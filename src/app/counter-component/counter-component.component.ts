@@ -21,5 +21,9 @@ export class CounterComponentComponent {
   onRemove() {
     this.remove.emit(); 
   }
+  onReset() {
+    this.number = 0
+    this.change.emit(this.number)
+  }
 }
 
